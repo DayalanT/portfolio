@@ -12,6 +12,25 @@ body, html {
     margin-top: 1em;
 }
 
+.social-icons {
+    position: absolute;
+    top: 40px; /* Adjusted to bring the icons a bit down */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* Adjusted to add some gap between icons */
+}
+
+.social-icons a {
+    color: #000; /* Changed color to black */
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #333; /* Slightly darker on hover */
+}
+
 .top-section {
     display: flex;
     justify-content: start;
@@ -214,4 +233,37 @@ li {
         width: 80px;
         height: 80px;
     }
+}
+.certification-badge {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.certification-description {
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+#certifications ul {
+    list-style-type: none; 
+    padding-left: 0;
+}
+
+#certifications li {
+    margin-bottom: 1em; 
+    display: flex;
+    align-items: center;
+}
+
+#certifications a {
+    text-decoration: none; 
+    color: #333; 
+    display: flex;
+    align-items: center;
+}
+
+#certifications a:hover .certification-description {
+    color: #4CAF50; /* Change color on hover */
 }
