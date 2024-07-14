@@ -1,0 +1,293 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Helvetica', 'Verdana', sans-serif;
+    background-color: #f8f8f8;
+    margin-left: 2em; 
+    margin-top: 1em;
+}
+
+.social-icons {
+    position: absolute;
+    top: 40px; /* Adjusted to bring the icons a bit down */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px; /* Adjusted to add some gap between icons */
+}
+
+.social-icons a {
+    color: #000; /* Changed color to black */
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #333; /* Slightly darker on hover */
+}
+
+.top-section {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 2em; 
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.headshot-container {
+    flex: 0 0 auto; 
+    margin-right: 2em; 
+}
+
+.contact-info {
+    flex: 1; 
+    text-align: left;
+}
+
+.resume-headshot {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #4CAF50;
+    object-fit: cover;
+}
+
+.resume-section {
+    margin-bottom: 2em;
+    padding: 1em; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+.resume-section h2 {
+    margin-bottom: .5em;
+    color: #333;
+    font-weight: 600;
+}
+
+ul {
+    padding-left: 20px;
+    list-style-type: none; 
+}
+
+li {
+    margin-bottom: .5em;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+#education p {
+    font-style: italic;
+}
+
+.degree {
+    font-weight: bold;
+    display: block; 
+    margin-top: 1em; 
+}
+
+.school {
+    display: block;
+    margin-bottom: 0.3em;
+}
+
+.timeline-content p {
+    font-style: italic;
+    margin-top: 0.5em;
+    color: #555; 
+}
+
+.resume-header {
+    text-align: center;
+}
+
+/* Timeline Styles */
+.timeline {
+    border-left: 3px solid #4CAF50;
+    padding-left: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.timeline-entry {
+    margin-top: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; 
+}
+
+.timeline-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    top: 0;
+}
+
+.timeline-content h3,
+.timeline-content p {
+    margin: 5px 0;
+    color: #333; 
+}
+
+/* Transition for smooth toggling of description */
+.timeline-content p {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Style for hiding/showing description */
+.hidden {
+    display: none;
+}
+
+.shown {
+    display: block;
+}
+
+/* Section Styles */
+.resume-section h2 {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 1.2em; 
+}
+
+/* Resume Button Styles */
+#resume-button {
+    position: absolute;
+    top: 20px;
+    right: 10%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    line-height: 60px;
+    animation: spin 4s linear infinite;
+    text-decoration: none; /* Remove underline for the link */
+}
+
+#resume-button:hover {
+    background-color: #45a049;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body, html {
+        margin-left: 1em; 
+        margin-right: 1em;
+    }
+
+    .top-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headshot-container {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+
+    #resume-button {
+        top: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .resume-section h2 {
+        font-size: 1em;
+        padding: 3px 6px;
+    }
+
+    .resume-section {
+        padding: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    #resume-button {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    .resume-headshot {
+        width: 80px;
+        height: 80px;
+    }
+}
+.certification-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Adjust the gap between badges as needed */
+    justify-items: center; /* Center the items within each cell */
+}
+
+.certification-badge {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    margin-bottom: 10px; /* Space between badge and description */
+}
+
+.certification-description {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+}
+
+#certifications a {
+    text-decoration: none; 
+    color: #333; 
+    display: block; /* Ensure each link is treated as a block */
+    text-align: center;
+}
+
+#certifications a:hover .certification-description {
+    color: #4CAF50; /* Change color on hover */
+}
+.projects-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.project-link {
+    text-align: center;
+    text-decoration: none;
+    color: #000; /* Black color for icon name */
+}
+
+.project-icon {
+    font-size: 60px; /* Adjust size as needed */
+    transition: transform 0.2s;
+}
+
+.project-icon:hover {
+    transform: scale(1.1);
+}
+
+.icon-name {
+    font-size: 14px; /* Adjust size as needed */
+    margin-top: 5px; /* Space between icon and name */
+}
+
